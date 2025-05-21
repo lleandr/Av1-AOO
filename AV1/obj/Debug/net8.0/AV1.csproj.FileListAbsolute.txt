@@ -1,0 +1,14 @@
+C:\Users\leand\Desktop\AV1\AV1\bin\Debug\net8.0\AV1.exe
+C:\Users\leand\Desktop\AV1\AV1\bin\Debug\net8.0\AV1.deps.json
+C:\Users\leand\Desktop\AV1\AV1\bin\Debug\net8.0\AV1.runtimeconfig.json
+C:\Users\leand\Desktop\AV1\AV1\bin\Debug\net8.0\AV1.dll
+C:\Users\leand\Desktop\AV1\AV1\bin\Debug\net8.0\AV1.pdb
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.AssemblyInfoInputs.cache
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.AssemblyInfo.cs
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.csproj.CoreCompileInputs.cache
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.dll
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\refint\AV1.dll
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.pdb
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.genruntimeconfig.cache
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\ref\AV1.dll
