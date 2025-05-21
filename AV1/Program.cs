@@ -142,7 +142,7 @@ Digite a opção (1 ou 2): ");
             string numero = Console.ReadLine();
             canal = new Telefone(numero);
             cananal = "Telegram e Whatsapp";
-            ccc = "Contato";
+            ccc = "contato";
         }
         else if (escolha == 2)
         {
@@ -150,7 +150,7 @@ Digite a opção (1 ou 2): ");
             string nome = Console.ReadLine();
             canal = new Usuario(nome);
             cananal = "Instagram, Facebook e Telegram";
-            ccc = "Usuário";
+            ccc = "usuário";
         }
         else
         {
