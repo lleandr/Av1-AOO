@@ -12,3 +12,4 @@ C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\refint\AV1.dll
 C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.pdb
 C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.genruntimeconfig.cache
 C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\ref\AV1.dll
+C:\Users\leand\Desktop\AV1\AV1\obj\Debug\net8.0\AV1.sourcelink.json

@@ -91,6 +91,8 @@ interface ICanal
 
 class Telefone : ICanal
 {
+    
+
     public string NumeroTelefone { get; set; }
 
     public Telefone(string numero)
@@ -100,7 +102,7 @@ class Telefone : ICanal
 
     public void EnviarMensagem(Mensagem mensagem)
     {
-        Console.WriteLine($"Canal: Telefone ({NumeroTelefone})");
+        Console.WriteLine($"\nCanal: Telefone (+55 (xx) {NumeroTelefone})");
         mensagem.Enviar();
     }
 }
@@ -116,7 +118,7 @@ class Usuario : ICanal
 
     public void EnviarMensagem(Mensagem mensagem)
     {
-        Console.WriteLine($"Canal: Usuário ({Usuarios})");
+        Console.WriteLine($"\nCanal: Usuário (@{Usuarios})");
         mensagem.Enviar();
     }
 }
@@ -124,19 +126,87 @@ class Usuario : ICanal
 class Program
 {
     static void Main()
-    {
-        ICanal canal1 = new Telefone("+55 11 98765-4321");
-        ICanal canal2 = new Usuario("joao123");
+    {   
+        Console.Write($@"Escolha o canal para enviar sua mensagem:
+1 - Número de telefone
+2 - Usuário
+Digite a opção (1 ou 2): ");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+        string cananal;
+        string ccc;
+        ICanal canal;
 
-        Mensagem msg1 = new MensagemSMS("oi", DateTime.Now);
-        Mensagem msg2 = new Video("vídeo", "video.mp4", "mp4", 120);
-        Mensagem msg3 = new Foto("foto", "foto.jpg", "jpg");
-        Mensagem msg4 = new Arquivo("aquivo", "arquivo.pdf", "pdf");
+        if (escolha == 1 )
+        {
+            Console.Write("\nDigite o número de telefone: +55 (xx) ");
+            string numero = Console.ReadLine();
+            canal = new Telefone(numero);
+            cananal = "Telegram e Whatsapp";
+            ccc = "Contato";
+        }
+        else if (escolha == 2)
+        {
+            Console.Write("\nDigite o nome do usuário: @");
+            string nome = Console.ReadLine();
+            canal = new Usuario(nome);
+            cananal = "Instagram, Facebook e Telegram";
+            ccc = "Usuário";
+        }
+        else
+        {
+            Console.WriteLine("\nOpção inválida.");
+            return;
+        }
+        
+        Console.Write($@"
+Escolha o tipo de arquivo:
+1 - Texto
+2 - Vídeo
+3 - Foto
+4 - Arquivo
+Digite a opção (1, 2, 3 ou 4): ");
 
-        canal1.EnviarMensagem(msg1);
-        canal2.EnviarMensagem(msg2);
-
-        canal2.EnviarMensagem(msg3);
-        canal1.EnviarMensagem(msg4);
+        int tipo = Convert.ToInt32(Console.ReadLine());
+        Mensagem mensagem = null;
+        if (tipo == 1)
+        {
+            Console.Write("\nDigite o texto da mensagem: ");
+            string texto = Console.ReadLine();
+            mensagem = new Mensagem(texto);
+        }
+        else if (tipo == 2)
+        {
+            Console.Write("\nDigite o título do vídeo: ");
+            string titulo = Console.ReadLine();
+            Console.Write("\nDigite o formato do vídeo: ");
+            string formato = Console.ReadLine();
+            Console.Write("\nDigite a duração do vídeo (em segundos): ");
+            
+            int duracao = int.Parse(Console.ReadLine());
+            mensagem = new Video(titulo, titulo, formato, duracao);
+        }
+        else if (tipo == 3)
+        {
+            Console.Write("\nDigite o título da foto: ");
+            string titulo = Console.ReadLine();
+            Console.Write("\nDigite o formato da foto: ");
+            string formato = Console.ReadLine();
+            mensagem = new Foto(titulo, titulo, formato);
+        }
+        else if (tipo == 4)
+        {
+            Console.Write("\nDigite o título do arquivo: ");
+            string titulo = Console.ReadLine();
+            Console.Write("\nDigite o formato do arquivo: ");
+            string formato = Console.ReadLine();
+            mensagem = new Arquivo(titulo, titulo, formato);
+        }
+        else
+        {
+            Console.WriteLine("\nOpção inválida. ");
+            
+        }
+        canal.EnviarMensagem(mensagem);
+        Console.WriteLine($"Mensagem enviada pelos canais: {cananal} do {ccc} selecionado");
     }
 }
